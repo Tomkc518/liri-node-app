@@ -8,7 +8,7 @@ Uses the Twitter, Spotify, Request, and DotEnv modules.
 
 Accetpable commands:
 
-node liir.js + :
+node liri.js + :
 
 my-tweets (gets your last 20 tweets and the date created)
 
