@@ -23,6 +23,7 @@ function getTweets(){
       };
     };
   });
+  commandLog();
 };
 //uses liriCommand to trigger function, and takes userEntry to feed the name of the track that the user wants to search
 function useSpotify(){
@@ -42,6 +43,7 @@ function useSpotify(){
       console.log("--------------------------------------");
     };
   });
+  commandLog();
 };
 //uses liriCommand to trigger function, and takes userEntry to feed the name of the movie that the user wants to search
 function getMovie(){
@@ -62,6 +64,16 @@ function getMovie(){
       console.log("Actors: " + JSON.parse(body).Actors);
       console.log("--------------------------------------");
     };
+  });
+  commandLog();
+};
+//log the liriCommand and userEntry history
+function commandLog(){
+  var log = "log.txt"
+  fs.appendFile(log, liriCommand + ',"' + userEntry + '", ', function(err) {
+    if (err) {
+      console.log(err);
+    }
   });
 };
 //if liriCommand is "do-what-it-says" then it pulls in the first and second positions in the random.txt file to populate the liriCommand and user Entry and then the correct fucntion is triggered with the new information
