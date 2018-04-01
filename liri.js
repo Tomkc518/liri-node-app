@@ -13,7 +13,7 @@ var liriCommand = process.argv[2];
 var userEntry = process.argv[3];
 //uses the liriCommand to pull in the last 20 tweets and console logs them
 function getTweets(){
-  client.get('statuses/user_timeline', 20, function(error, tweets, response) {
+  client.get('statuses/user_timeline', 20, function(error, tweets) {
     if (!error) {
       for (var i = 0; i < tweets.length; i++){
         console.log("--------------------------------------");
