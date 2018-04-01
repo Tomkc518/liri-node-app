@@ -33,7 +33,7 @@ function useSpotify(){
   spotify.search({ type: 'track', query: userEntry, limit: 5}, function(err, data) {
     if (err) {
       return console.log('Error occurred: ' + err);
-    }
+    };
     for (var j = 0; j < 5; j++){
       console.log("--------------------------------------");
       console.log("Artist: " + data.tracks.items[j].artists[0].name);
@@ -73,7 +73,7 @@ function commandLog(){
   fs.appendFile(log, liriCommand + ',"' + userEntry + '", ', function(err) {
     if (err) {
       console.log(err);
-    }
+    };
   });
 };
 //if liriCommand is "do-what-it-says" then it pulls in the first and second positions in the random.txt file to populate the liriCommand and user Entry and then the correct fucntion is triggered with the new information
@@ -104,9 +104,9 @@ switch (liriCommand) {
       getTweets();
       break;
     case 'spotify-this-song':
-      useSpotify()
+      useSpotify();
       break;
     case 'movie-this':
-      getMovie()
+      getMovie();
       break;
 };
