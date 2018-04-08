@@ -1,5 +1,7 @@
 # Liri Node APP
 
+![Alt text](assets/tutorial.gif "Demo")
+
 It's like SIRI, but not.
 
 This project uses Node to get information from Twitter, Spotify and OMDB.
