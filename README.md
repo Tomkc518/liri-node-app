@@ -1,6 +1,6 @@
 # Liri Node APP
 
-![Alt text](assets/tutorial.gif "Demo")
+![Alt text](assets/tutorial_liri.gif "Demo")
 
 It's like SIRI, but not.
 
